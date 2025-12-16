@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Opsætning - Trin 5 af 5 (Afslutning){% endblock %}
+
+{% block content %}
+<div class="onboarding-page">
+    <center>
+        <h1>Trin 5: Vælg Indtægtsmodel</h1>
+        <p class="step-progress">Status: 99% - Klar til Afslutning</p>
+    </center>
+    
+    <div class="step-content final-step">
+        <h2>Hvordan skal dine indtægter bruges?</h2>
+        
+        <form action="{{ url_for('complete_onboarding') }}" method="POST" class="choice-form">
+            <label for="income_choice">Vælg din indtægtsmodel:</label>
+            <select name="income_choice" id="income_choice" required>
+                <option value="income">Jeg vil ikke donere</option>
+                
+                <option value="donation">Jeg vil gerne donere pengene til Børnecancerfonden</option>
+                
+                <option value="deferred_donation">Jeg ønsker at skifte til donation efter 6 måneder, når produktets pris er indtjent.</option> 
+            </select>
+            
+            <p class="note" style="margin-top: 20px;">
+                Din enhed er nu godkendt og klar til at stabilisere elnettet. Du vil modtage betaling/donation kvartalsvis.
+            </p>
+
+            <div class="navigation-buttons">
+                <a href="{{ url_for('onboarding_step', step_number=4) }}" class="back-button">&larr; Tilbage</a>
+                <button type="submit" class="cta-button final-cta">Afslut Opsætning</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

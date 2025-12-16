@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Opsætning - Trin 2 af 4{% endblock %}
+
+{% block content %}
+<div class="onboarding-page">
+    <center>
+        <h1>Trin 2: Indstil Enhedens Effekt</h1>
+        <p class="step-progress">Status: 50% fuldført</p>
+    </center>
+
+    <div class="step-content">
+        <h2>Vælg din indstilling for optimal udbetaling</h2>
+        <ul>
+            <li>Hvis du bruger din tilsluttede enhed dagligt, skal den blot stå på din ønskede indstilling.</li>
+            <li>Hvis du IKKE bruger enheden dagligt, skal du skrue den op på Maks. (højeste indstilling). Dette sikrer den største udbetaling for systemydelser.</li>
+        </ul>
+        <p class="note"><strong>Husk:</strong> Følg instruktionerne i hjemmesiden(linket til hjemmesiden er sendt til din mail). Enheden skulle gerne komme online nu.</p>
+        <br>
+        <div class="navigation-buttons">
+            <a href="{{ url_for('onboarding_step', step_number=1) }}" class="back-button">&larr; Tilbage</a>
+            <a href="{{ url_for('onboarding_step', step_number=3) }}" class="next-button">Næste Trin &rarr;</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

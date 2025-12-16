@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Opsætning Fuldført!{% endblock %}
+
+{% block content %}
+<div class="onboarding-page">
+    <center>
+        <h1>Opsætning Fuldført!</h1>
+        <p class="step-progress">Status: 100% fuldført: Din BEAM-enhed er nu klar til at stabilisere elnettet.</p>
+    </center>
+    
+    <div class="step-content">
+        <div style="text-align: center; margin: 40px 0;">
+            <img src="{{ url_for('static', filename='img/green-check-mark-emoji-icon-600nw-2644362865.png') }}" alt="Bekræftelses Tjekmærke" style="width: 150px; height: auto;">
+        </div>
+        
+        <h2>Tillykke!</h2>
+        <p>
+            Du har succesfuldt gennemført opsætningen. Din BEAM-enhed er nu registreret i Bodil-systemet og klar til at deltage i energimarkedet.
+        </p>
+
+        <div class="navigation-buttons" style="justify-content: center; margin-top: 50px;">
+            <a href="{{ url_for('index') }}" class="cta-button">Gå til Forsiden</a>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

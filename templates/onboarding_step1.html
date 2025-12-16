@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Opsætning - Trin 1 af 5 (Sæt i Stik){% endblock %}
+
+{% block content %}
+<div class="onboarding-page">
+    <center>
+        <h1>Trin 1: Sæt i Stik & Tænd</h1>
+        <p class="step-progress">Status: 20% fuldført</p>
+    </center>
+    
+    <div class="step-content">
+        <h2>Tilslut din enhed</h2>
+        
+        <ul>
+            <li>For at starte opsætningen, skal du tilslutte din BEAM plug til en stikkontakt, som den er beregnet til.</li>
+            <li>Sæt din enhed (fx. din elradiator) til BEAM pluggen.</li>
+            <li>Sørg for, at den lille statuslampe på BEAM pluggen lyser fast. Dette indikerer, at enheden er tændt og er klar til Wi-Fi opsætning.</li>
+        </ul>
+        
+        <br>
+
+        <div class="navigation-buttons">
+            <a href="{{ url_for('start_onboarding') }}" class="back-button">&larr; Tilbage</a>
+            <a href="{{ url_for('onboarding_step', step_number=2) }}" class="cta-button">Videre til Trin 2 &rarr;</a>
+        </div>
+        
+        <hr style="margin-top: 30px;">
+        
+        <div class="video-guide" style="max-width: 400px; margin: 30px auto; text-align: center;">
+            <p><strong>Er du i tvivl? Se video-vejledningen her:</strong></p>
+            <video width="100%" controls loop>
+                <source src="{{ url_for('static', filename='video/594382805_25446276541670558_5270976056607487696_n.mp4') }}" type="video/mp4">
+                Din browser understøtter ikke video-tagget.
+            </video>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

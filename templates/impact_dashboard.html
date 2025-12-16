@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Impact Dashboard{% endblock %}
+
+{% block content %}
+<div class="impact-container">
+    
+    <div class="looker-embed-area">
+        <iframe width="100%" height="800" src="https://lookerstudio.google.com/embed/reporting/8600a337-8867-443e-85dc-07ea93bf8fc4/page/A6biF" 
+                frameborder="0" style="border:0" 
+                allowfullscreen 
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+        </iframe>
+    </div>
+
+    <hr>
+    
+    <section class="donation-impact-case">
+        <div class="impact-text-area">
+            <h2>Millionstøtte til kræftramte børn</h2>
+            <h3>Dine donationer gør en forskel gennem Børnecancerfonden!</h3>
+            <p>
+                Ved at vælge 'Aktiv Donation' bidrager du til vitale projekter, der sikrer bedre liv for børn, der kæmper mod alvorlig sygdom, og deres familier.
+            </p>
+            <ul class="impact-list">
+                <li>Børnecancerfonden øger indsatsen for at forbedre livet for børn med kræft og deres familier.</li>
+                <li>Hele 74,3 mio. kr. fra de indsamlede midler i 2024 er sendt af sted til 95 projekter og støtteinitiativer.</li>
+                <li>Dette er det højeste antal i fondens 30-årige historie.</li>
+            </ul>
+            <p class="cta-link">
+                <a href="https://boernecancerfonden.dk/det-gaar-pengene-til/stor-millionstoette-til-kraeftramte-boern/" target="_blank">Læs mere om de projekter du støtter →</a>
+            </p>
+        </div>
+        
+        <div class="impact-image-area">
+            <img src="{{ url_for('static', filename='img/cancer_support.png') }}" alt="Børn modtager støtte" class="impact-photo">
+        </div>
+    </section>
+</div>
+{% endblock %}

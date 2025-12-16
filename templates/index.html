@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="welcome">
+    <center><h1>Vores digitale løsning</h1></center>
+    <br>
+    <center>
+    <p>
+        Bemærk venligst, at dette er en standalone prototype for at demonstrere MVP'ens funktionalitet.<br>
+        Ved den reelle implementering vil denne brugerflade blive incorporeret direkte i jeres nuværende webmiljø (som en sektion/komponent), i overensstemmelse med jeres eksisterende UI/UX-retningslinjer.
+    </p>
+</center>
+    <br>
+    <center><img src="{{ url_for('static', filename='img/produkt.png') }}" width="600" alt="Company Logo" class="logo"></center>
+    <br><br>
+    
+    <center>
+        <h1>Impact & onboarding (MVP)</h1>
+        <a href="{{ url_for('start_onboarding') }}" class="btn-primary">Start Opsætning Nu</a>
+    </center>
+    <br>
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Opsætning - Trin 4 af 5 (Aktivér){% endblock %}
+
+{% block content %}
+<div class="onboarding-page">
+    <center>
+        <h1>Trin 4: Aktivér og Test</h1>
+        <p class="step-progress">Status: 80% - Næsten klar!</p>
+    </center>
+
+    <div class="step-content">
+        <h2>Start din Kvalificeringstest</h2>
+        <ol>
+            <li>Klik på knappen nedenfor for at Aktivér enheden. Din enhed begynder nu at tænde og slukke en række gange.</li>
+            <li>Dette starter nu en Kvalificeringstest (tænde/slukke enheden i en række gange) som tager ca. 30 minutter.</li>
+            <li>Efter testen skal Energinet godkende din enhed. Dette tager typisk 2-3 uger, før dataen er analyseret og godkendt.</li>
+        </ol>
+        <br>
+        
+        <div class="navigation-buttons" style="justify-content: center; gap: 40px;">
+            <a href="{{ url_for('onboarding_step', step_number=3) }}" class="back-button">&larr; Tilbage</a>
+            
+            <a href="{{ url_for('onboarding_step', step_number=5) }}" class="cta-button">Aktivér Enhed</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

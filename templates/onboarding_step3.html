@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Opsætning - Trin 3 af 4{% endblock %}
+
+{% block content %}
+<div class="onboarding-page">
+    <center>
+        <h1>Trin 3: Tilslut til Wi-Fi (Nødvendig konfiguration)</h1>
+        <p class="step-progress">Status: 75% fuldført</p>
+    </center>
+
+    <div class="step-content">
+        <h2>Forbind dit BEAM plug med internettet</h2>
+        <ol>
+            <li>Find en computer eller telefon, der er på dit netværk.</li>
+            <li>Du skal derefter indtaste dit Wi-Fi navn og kode i dashboardet for at konfigurere enheden korrekt.</li>
+        </ol>
+        <p class="note"><strong>Vigtig note: Her skal Bodils oprettelsesflow anvendes (det flow, de tilgår via et link i deres e-mail). Da vi ikke har adgang til disse oplysninger, kan dette ikke implementeres i praksis.</strong></p>
+        <p class="note">
+            Hvis Wi-Fi signalet er svagt, flyt da stikket eller Wi-Fi routeren tættere på. Du kan også købe en Wi-Fi-extender.<br>
+            Hvis enheden er stærk, men ikke kommer på nettet, skyldes det ofte, at navn eller kode er forkert. Skriv i så fald til <a href="mailto:BEAM@bodil.energy">BEAM@bodil.energy</a> for at få nye instruktioner.
+        </p>
+        <br>
+        <div class="navigation-buttons">
+            <a href="{{ url_for('onboarding_step', step_number=2) }}" class="back-button">&larr; Tilbage</a>
+            <a href="{{ url_for('onboarding_step', step_number=4) }}" class="next-button">Næste Trin &rarr;</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

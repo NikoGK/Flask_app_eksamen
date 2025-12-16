@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #1a3a3a;
+    background: #ffffff;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header & Navigation */
+header {
+    background: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #00897b;
+    font-weight: 600;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+header a {
+    color: #1a3a3a;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+header a:hover {
+    background: #f5f5f5;
+    color: #00897b;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #00897b;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: #00796b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,137,123,0.3);
+}
+
+.btn-secondary {
+    background: #ff9f43;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #ff8c1a;
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+    min-height: calc(100vh - 200px);
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #1a3a3a;
+}
+
+.hero-content h2 .highlight-orange {
+    color: #ff9f43;
+}
+
+.hero-content h2 .highlight-green {
+    color: #66bb6a;
+}
+
+.hero-content .subheading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a3a3a;
+}
+
+.hero-content .price {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.hero-content .description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.hero-content .description strong {
+    color: #1a3a3a;
+    font-weight: 600;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+}
+
+.feature-badge {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    position: absolute;
+    bottom: 50px;
+    left: -50px;
+    max-width: 280px;
+}
+
+.feature-badge h3 {
+    color: #00897b;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-badge p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.features h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a3a3a;
+    font-weight: 700;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #00897b 0%, #66bb6a 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2.5rem;
+}
+
+.feature-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a3a3a;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: #1a3a3a;
+    color: white;
+    padding: 40px 0;
+    margin-top: 80px;
+}
+
+footer .container {
+    text-align: center;
+}
+
+footer p {
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content .subheading {
+        font-size: 1.5rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .feature-badge {
+        position: static;
+        margin-top: 30px;
+    }
+}
+
+/* --- ONBOARDING FLOW STYLES (KISS principle) --- */
+
+.onboarding-page {
+    max-width: 800px; /* Begrænser bredden for læsbarhed */
+    margin: 40px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Let skygge for at fremhæve blokken */
+}
+
+.onboarding-page h1 {
+    color: #00897b;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.step-progress {
+    color: #66bb6a;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.step-content {
+    text-align: left;
+    padding: 20px 0;
+}
+
+.step-content h2 {
+    font-size: 1.8rem;
+    color: #1a3a3a;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #ff9f43; /* Orange accent */
+    padding-left: 15px;
+}
+
+.step-content p {
+    margin-bottom: 1rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+.step-content ul, .step-content ol {
+    margin-left: 25px;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+.step-content li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.note {
+    background: #fff8e1; /* Lys gul baggrund for vigtige noter */
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ff9f43;
+    margin-top: 20px;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 30px;
+}
+
+.navigation-buttons a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+/* Back Button Style */
+.back-button {
+    color: #1a3a3a;
+    background: #e0e0e0;
+}
+
+.back-button:hover {
+    background: #ccc;
+}
+
+/* Next Button (Primary action) */
+.next-button {
+    background: #00897b; /* Samme som btn-primary */
+    color: white;
+}
+
+.next-button:hover {
+    background: #00796b;
+    transform: translateY(-1px);
+}
+
+/* Call to Action Button (Final step activation) */
+.cta-button {
+    /* Brug samme stil som den primære knap, men større */
+    background: #ff9f43; /* Sekundær farve for at skabe kontrast og handle nu! */
+    color: white;
+    padding: 15px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background: #ff8c1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255,159,67,0.4);
+}
+
+/* --- TRIN 5 FORMULAR STYLES --- */
+.choice-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #1a3a3a;
+}
+
+.choice-form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    appearance: none; /* Skjuler standard pil i nogle browsere */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2300897b%22%20d%3D%22M287%20173.5c-4%204-9.3%206-14.5%206H19.9c-5.2%200-10.5-2-14.5-6s-6-10-6-14.5%202-10.5%206-14.5L133.5%204.9c4-4%209.3-6%2014.5-6s10.5%202%2014.5%206l129%20129c4%204%206%209.3%206%2014.5s-2%2010.5-6%2014.5z%22%20transform%3D%22rotate(180%20146.2%20146.2)%22%2F%3E%3C%2Fsvg%3E'); /* Egen pil for stil */
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 10px;
+}
+
+.choice-form select:focus {
+    border-color: #00897b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 137, 123, 0.2);
+}
+
+.final-cta {
+    /* Sikrer at den sidste knap er stor og tydelig */
+    padding: 15px 40px !important; 
+    font-size: 1.2rem !important;
+}
+
+/* --- IMPACT DASHBOARD STYLING --- */
+
+.impact-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.looker-embed-area {
+    min-height: 500px; /* Sæt højde efter dit Looker Dashboard */
+    background-color: #f0f0f0;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donation-impact-case {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 12px;
+    background-color: #EDE7F6; /* Let lilla baggrund (som i dit eksempel) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.impact-text-area {
+    flex: 1;
+    color: #333;
+}
+
+.impact-text-area h2 {
+    color: #5E35B1; /* Dyb lilla farve */
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.impact-text-area h3 {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.impact-list {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.impact-image-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.impact-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Responsivt design for små skærme */
+@media (max-width: 768px) {
+    .donation-impact-case {
+        flex-direction: column;
+    }
+}
